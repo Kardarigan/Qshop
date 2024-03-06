@@ -1,14 +1,25 @@
+* {
+    transition: all 0.2s ease;
+}
+
 body {
+    font-family: "Poppins", sans-serif;
     color: $color_text !important;
     background-color: $color_background !important;
 }
 
 a {
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 ul {
     li {
         list-style: none;
     }
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Didot", sans-serif;
 }

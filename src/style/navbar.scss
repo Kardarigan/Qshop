@@ -1,12 +1,42 @@
 header {
     nav {
-        width: 80vw;
+        width: 95vw;
         background-color: $color_background_2nd;
 
         img {
             width: 40px;
-            height: 40px;
+            height: 45px;
+        }
+
+        i {
+            font-size: 1.5em;
+        }
+
+        li {
+            margin: 10px;
+
+            a {
+                border-bottom: 1px solid transparent;
+
+                &.active {
+                    padding-bottom: 2px;
+                    border-bottom: 1px solid $color_text_2nd;
+                }
+
+                &:hover {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $color_text_2nd_hover;
+                }
+            }
+
+        }
+
+        a {
+            color: $color_text_2nd;
+
+            &:hover {
+                color: $color_text_2nd_hover;
+            }
         }
     }
-
 }
