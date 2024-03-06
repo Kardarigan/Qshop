@@ -1,0 +1,71 @@
+$color_prime: #15F5BA;
+$color_prime_hover: lighten($color_prime, 2);
+$color_second: #836FFF;
+$color_dark: #211951;
+$color_dark_hover: lighten($color_dark, 0.8);
+$color_light: #F0F3FF;
+$color_middle: #40679E;
+
+$color_text: $color_light;
+$color_text_2nd: $color_light;
+$color_background: #0d0b19;
+$color_background_2nd: $color_light;
+
+
+.text {
+    &-link {
+        color: $color_prime;
+
+        &:hover {
+            color: $color_prime_hover;
+        }
+    }
+
+    &-justify {
+        text-align: justify;
+    }
+}
+
+
+.flexCentralizer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allunset {
+    all: unset;
+}
+
+.textJustify {
+    text-align: justify;
+}
+
+
+// --------------------------{ Buttons
+.button {
+    padding: 20px 10px;
+    font-size: 1em;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.25s;
+    border-radius: 20px;
+    @extend .flexCentralizer;
+
+
+
+    &:active {
+        outline: 1px solid $color_prime;
+    }
+
+    &-classic {
+        border: 1px solid $color_prime;
+        color: $color_prime;
+        background-color: $color_dark;
+
+        &:hover {
+            background-color: $color_dark_hover;
+            box-shadow: 0 0 10px 0 rgba($color_prime, 0.5);
+        }
+    }
+}
