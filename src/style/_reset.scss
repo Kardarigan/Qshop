@@ -19,7 +19,12 @@ ul {
 }
 
 h1,
-h2,
 h3 {
     font-family: "Didot", sans-serif;
+}
+
+.bg {
+    &-light {
+        background-color: $color_background_2nd;
+    }
 }

@@ -16,20 +16,20 @@ export default function Hero() {
                 <SplideSlide>
 
                     <div className="slide">
-                        <h2>New Season Sale Now</h2>
+                        <h3>New Season Sale Now</h3>
                     </div>
                 </SplideSlide>
                 <SplideSlide>
 
                     <div className="slide">
-                        <h2>Price Fallout</h2>
+                        <h3>Price Fallout</h3>
                     </div>
                 </SplideSlide>
 
                 <SplideSlide>
 
                     <div className="slide">
-                        <h2>Brand New Qshop Exclosive</h2>
+                        <h3>Brand New Qshop Exclosive</h3>
                     </div>
                 </SplideSlide>
 

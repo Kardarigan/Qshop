@@ -45,13 +45,12 @@ $color_background_2nd: $color_light;
 
 // --------------------------{ Buttons
 .button {
-    padding: 20px 10px;
+    padding: 10px 30px;
     font-size: 1em;
-    font-weight: 800;
     cursor: pointer;
     transition: all 0.25s;
-    border-radius: 20px;
     @extend .flexCentralizer;
+    max-width: 100px;
 
 
 
@@ -67,6 +66,24 @@ $color_background_2nd: $color_light;
         &:hover {
             background-color: $color_dark_hover;
             box-shadow: 0 0 10px 0 rgba($color_prime, 0.5);
+        }
+    }
+
+    &-arrow {
+        color: $color_dark;
+        border: 1px solid $color_dark;
+
+        i {
+            padding-left: 3px;
+        }
+
+        &:hover {
+            color: $color_dark_hover;
+            border-color: $color_dark_hover;
+
+            i {
+                transform: translateX(10px)
+            }
         }
     }
 }

@@ -1,0 +1,34 @@
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 75%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    h2 {
+        font-size: 1em;
+        color: black;
+    }
+
+    span {
+
+        &:first-child {
+            color: $color_text_2nd;
+            font-weight: 800;
+
+        }
+
+        &:last-child {
+            color: $color_text_2nd_hover;
+            font-size: 0.8em;
+        }
+    }
+
+    &:hover {
+        transform: translateY(10px);
+    }
+}
