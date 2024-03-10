@@ -1,8 +1,23 @@
 import React from "react";
-import Data from "../comps/assets/all_product"
+import Products from "../comps/functions/Products";
 
-export default function Category() {
+export default function Category({ category, banner }) {
+
+    const headerStyle = {
+        backgroundImage: `url(${banner})`,
+    };
+
     return (
-        <div>dfd</div>
+        <section className="category">
+            <div className="header text-center my-5" style={headerStyle}>
+                <div>
+                    <h1>ALL GARMENTS FOR {category.toUpperCase()}</h1>
+                    <hr className="w-25 mx-auto" />
+                </div>
+            </div>
+            <div className="row gy-3 py-5">
+                <Products category={category.toLowerCase()} />
+            </div>
+        </section>
     );
 }

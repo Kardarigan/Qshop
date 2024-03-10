@@ -13,8 +13,8 @@ export default function Navbar() {
                     <li><NavLink exact activeclassname="active" to="/">HOME</NavLink></li>
                     <li><NavLink exact activeclassname="active" to="/Women">WOMEN</NavLink></li>
                     <li><NavLink exact activeclassname="active" to="/Men">MEN</NavLink></li>
-                    <li><NavLink exact activeclassname="active" to="/Children">KIDS</NavLink></li>
-                    <li><NavLink exact activeclassname="active" to="/Children">QARA</NavLink></li>
+                    <li><NavLink exact activeclassname="active" to="/Kids">KIDS</NavLink></li>
+                    <li><NavLink exact activeclassname="active" to="/Qara">QARA</NavLink></li>
                 </ul>
                 <div>
                     <NavLink to="/Cart" className="me-3">

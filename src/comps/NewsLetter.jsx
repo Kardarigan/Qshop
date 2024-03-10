@@ -8,7 +8,7 @@ export default function NewsLetter() {
                 <p className="text-dark">Subscribe to out Newsletter and hunt any offers</p>
                 <form className="d-flex mt-5 col-md-7 mx-auto">
                     <input type="text" className="field border-end-0" placeholder="Your Email Address..." required />
-                    <input type="submit" className="button button-arrow" />
+                    <input type="submit" className="button button-classic" />
                 </form>
             </div>
         </section>
