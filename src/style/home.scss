@@ -45,3 +45,12 @@
         font-size: 3em;
     }
 }
+
+.newsLetter {
+    background-color: $color_background_2nd;
+
+    h3 {
+        mix-blend-mode: difference;
+        font-size: 3em;
+    }
+}

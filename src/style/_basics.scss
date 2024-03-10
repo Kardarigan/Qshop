@@ -7,7 +7,7 @@ $color_light: #F0F3FF;
 $color_middle: #40679E;
 
 $color_text: $color_light;
-$color_text_2nd: $color_dark;
+$color_text_2nd: black;
 $color_text_2nd_hover: lighten($color_dark, 30);
 $color_background: #0d0b19;
 $color_background_2nd: $color_light;
@@ -19,6 +19,14 @@ $color_background_2nd: $color_light;
 
         &:hover {
             color: $color_prime_hover;
+        }
+
+        &-2nd {
+            color: $color_text_2nd;
+
+            &:hover {
+                color: $color_text_2nd_hover;
+            }
         }
     }
 
@@ -55,7 +63,7 @@ $color_background_2nd: $color_light;
 
 
     &:active {
-        outline: 1px solid $color_prime;
+        outline: 1px solid $color_background;
     }
 
     &-classic {
@@ -74,7 +82,7 @@ $color_background_2nd: $color_light;
         border: 1px solid $color_dark;
 
         i {
-            padding-left: 3px;
+            padding-left: 5px;
         }
 
         &:hover {
@@ -84,6 +92,30 @@ $color_background_2nd: $color_light;
             i {
                 transform: translateX(10px)
             }
+        }
+    }
+}
+
+// --------------------------{ field
+.field {
+    all: unset;
+    color: $color_text_2nd;
+    width: calc(100% - 50px);
+    padding: 12px 20px;
+    border: 1px solid $color_background;
+    background-color: transparent;
+    text-align: start;
+
+    &::placeholder {
+        color: rgba($color_text_2nd, 0.5);
+        opacity: 1;
+        transition: 0.15s;
+    }
+
+    &:focus,
+    &:focus-within {
+        &::placeholder {
+            opacity: 0
         }
     }
 }

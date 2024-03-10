@@ -10,10 +10,11 @@ export default function Navbar() {
                     <img src={Logo} alt="Logo" />
                 </NavLink>
                 <ul className='d-sm-flex d-none justify-content-between m-0 p-0'>
-                    <li><NavLink exact activeclassname="active" to="/">Home</NavLink></li>
-                    <li><NavLink exact activeclassname="active" to="/Women">Women</NavLink></li>
-                    <li><NavLink exact activeclassname="active" to="/Men">Men</NavLink></li>
-                    <li><NavLink exact activeclassname="active" to="/Children">Children</NavLink></li>
+                    <li><NavLink exact activeclassname="active" to="/">HOME</NavLink></li>
+                    <li><NavLink exact activeclassname="active" to="/Women">WOMEN</NavLink></li>
+                    <li><NavLink exact activeclassname="active" to="/Men">MEN</NavLink></li>
+                    <li><NavLink exact activeclassname="active" to="/Children">KIDS</NavLink></li>
+                    <li><NavLink exact activeclassname="active" to="/Children">QARA</NavLink></li>
                 </ul>
                 <div>
                     <NavLink to="/Cart" className="me-3">
