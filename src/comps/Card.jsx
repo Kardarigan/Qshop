@@ -7,6 +7,7 @@ export default function Card(product) {
                 <img src={product.cover} alt={product.title} />
                 <div className="p-2">
                     <h2>{product.title}</h2>
+                    <hr />
                     <div className="d-flex justify-content-between">
                         <span>${product.price}</span>
                         <span>{product.date}</span>

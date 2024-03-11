@@ -1,5 +1,4 @@
 import React from "react";
-import HeroImage from "./assets/hero_image.png";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 export default function Hero() {

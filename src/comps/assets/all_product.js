@@ -1,46 +1,20 @@
-import p1_img from "./product_1.png";
-import p2_img from "./product_2.png";
-import p3_img from "./product_3.png";
-import p4_img from "./product_4.png";
-import p5_img from "./product_5.png";
-import p6_img from "./product_6.png";
-import p7_img from "./product_7.png";
-import p8_img from "./product_8.png";
-import p9_img from "./product_9.png";
-import p10_img from "./product_10.png";
-import p11_img from "./product_11.png";
-import p12_img from "./product_12.png";
-import p13_img from "./product_13.png";
-import p14_img from "./product_14.png";
-import p15_img from "./product_15.png";
-import p16_img from "./product_16.png";
-import p17_img from "./product_17.png";
-import p18_img from "./product_18.png";
-import p19_img from "./product_19.png";
-import p20_img from "./product_20.png";
-import p21_img from "./product_21.png";
-import p22_img from "./product_22.png";
-import p23_img from "./product_23.png";
-import p24_img from "./product_24.png";
-import p25_img from "./product_25.png";
-import p26_img from "./product_26.png";
-import p27_img from "./product_27.png";
-import p28_img from "./product_28.png";
-import p29_img from "./product_29.png";
-import p30_img from "./product_30.png";
-import p31_img from "./product_31.png";
-import p32_img from "./product_32.png";
-import p33_img from "./product_33.png";
-import p34_img from "./product_34.png";
-import p35_img from "./product_35.png";
-import p36_img from "./product_36.png";
+import MenCover_1 from "./products/men-product-01.jpg";
+import MenCover_2 from "./products/men-product-02.jpg";
+import MenCover_3 from "./products/men-product-03.jpg";
+import MenCover_4 from "./products/men-product-04.jpg";
+import MenCover_5 from "./products/men-product-05.jpg";
+import WomenCover_1 from "./products/women-product-01.jpg";
+import WomenCover_2 from "./products/women-product-02.jpg";
+import WomenCover_3 from "./products/women-product-03.jpg";
+import WomenCover_4 from "./products/women-product-04.jpg";
+import WomenCover_5 from "./products/women-product-05.jpg";
 
 let all_product = [
   {
     id: 1,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p1_img,
+    cover: WomenCover_1,
     price: 50.0,
     newPrice: 80.5,
     date: "8/5/2024",
@@ -50,7 +24,7 @@ let all_product = [
     id: 2,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p2_img,
+    cover: WomenCover_2,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -60,7 +34,7 @@ let all_product = [
     id: 3,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p3_img,
+    cover: WomenCover_3,
     price: 60.0,
     newPrice: 100.5,
     date: "8/5/2024",
@@ -70,7 +44,7 @@ let all_product = [
     id: 4,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p4_img,
+    cover: WomenCover_4,
     price: 100.0,
     newPrice: 150.0,
     date: "8/5/2024",
@@ -80,7 +54,7 @@ let all_product = [
     id: 5,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p5_img,
+    cover: WomenCover_5,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -90,9 +64,9 @@ let all_product = [
     id: 6,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p6_img,
-    price: 85.0,
-    newPrice: 120.5,
+    cover: WomenCover_1,
+    price: 50.0,
+    newPrice: 80.5,
     date: "8/5/2024",
     exclusive: true,
   },
@@ -100,7 +74,7 @@ let all_product = [
     id: 7,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p7_img,
+    cover: WomenCover_2,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -110,9 +84,9 @@ let all_product = [
     id: 8,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p8_img,
-    price: 85.0,
-    newPrice: 120.5,
+    cover: WomenCover_3,
+    price: 60.0,
+    newPrice: 100.5,
     date: "8/5/2024",
     exclusive: true,
   },
@@ -120,9 +94,9 @@ let all_product = [
     id: 9,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p9_img,
-    price: 85.0,
-    newPrice: 120.5,
+    cover: WomenCover_4,
+    price: 100.0,
+    newPrice: 150.0,
     date: "8/5/2024",
     exclusive: true,
   },
@@ -130,7 +104,7 @@ let all_product = [
     id: 10,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: p10_img,
+    cover: WomenCover_5,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -138,9 +112,9 @@ let all_product = [
   },
   {
     id: 11,
-    title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    category: "women",
-    cover: p11_img,
+    title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    category: "men",
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -148,9 +122,9 @@ let all_product = [
   },
   {
     id: 12,
-    title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    category: "women",
-    cover: p12_img,
+    title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    category: "men",
+    cover: MenCover_2,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -160,7 +134,7 @@ let all_product = [
     id: 13,
     title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "men",
-    cover: p13_img,
+    cover: MenCover_3,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -170,7 +144,7 @@ let all_product = [
     id: 14,
     title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "men",
-    cover: p14_img,
+    cover: MenCover_4,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -180,7 +154,7 @@ let all_product = [
     id: 15,
     title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "men",
-    cover: p15_img,
+    cover: MenCover_5,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -190,7 +164,7 @@ let all_product = [
     id: 16,
     title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "men",
-    cover: p16_img,
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -200,7 +174,7 @@ let all_product = [
     id: 17,
     title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "men",
-    cover: p17_img,
+    cover: MenCover_2,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -210,7 +184,7 @@ let all_product = [
     id: 18,
     title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "men",
-    cover: p18_img,
+    cover: MenCover_3,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -220,7 +194,7 @@ let all_product = [
     id: 19,
     title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "men",
-    cover: p19_img,
+    cover: MenCover_4,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -230,7 +204,7 @@ let all_product = [
     id: 20,
     title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "men",
-    cover: p20_img,
+    cover: MenCover_5,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -238,49 +212,49 @@ let all_product = [
   },
   {
     id: 21,
-    title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    category: "men",
-    cover: p21_img,
+    title: "Boys Orange Colourblocked Hooded Sweatshirt",
+    category: "kids",
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
-    exclusive: true,
+    exclusive: false,
   },
   {
     id: 22,
-    title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    category: "men",
-    cover: p22_img,
+    title: "Boys Orange Colourblocked Hooded Sweatshirt",
+    category: "kids",
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
-    exclusive: true,
+    exclusive: false,
   },
   {
     id: 23,
-    title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    category: "men",
-    cover: p23_img,
+    title: "Boys Orange Colourblocked Hooded Sweatshirt",
+    category: "kids",
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
-    exclusive: true,
+    exclusive: false,
   },
   {
     id: 24,
-    title: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    category: "men",
-    cover: p24_img,
+    title: "Boys Orange Colourblocked Hooded Sweatshirt",
+    category: "kids",
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
-    exclusive: true,
+    exclusive: false,
   },
   {
     id: 25,
     title: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kids",
-    cover: p25_img,
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -290,7 +264,7 @@ let all_product = [
     id: 26,
     title: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kids",
-    cover: p26_img,
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -300,7 +274,7 @@ let all_product = [
     id: 27,
     title: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kids",
-    cover: p27_img,
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -310,7 +284,7 @@ let all_product = [
     id: 28,
     title: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kids",
-    cover: p28_img,
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -320,7 +294,7 @@ let all_product = [
     id: 29,
     title: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kids",
-    cover: p29_img,
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -330,7 +304,7 @@ let all_product = [
     id: 30,
     title: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kids",
-    cover: p30_img,
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -340,7 +314,7 @@ let all_product = [
     id: 31,
     title: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kids",
-    cover: p31_img,
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",
@@ -350,47 +324,7 @@ let all_product = [
     id: 32,
     title: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kids",
-    cover: p32_img,
-    price: 85.0,
-    newPrice: 120.5,
-    date: "8/5/2024",
-    exclusive: false,
-  },
-  {
-    id: 33,
-    title: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "kids",
-    cover: p33_img,
-    price: 85.0,
-    newPrice: 120.5,
-    date: "8/5/2024",
-    exclusive: false,
-  },
-  {
-    id: 34,
-    title: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "kids",
-    cover: p34_img,
-    price: 85.0,
-    newPrice: 120.5,
-    date: "8/5/2024",
-    exclusive: false,
-  },
-  {
-    id: 35,
-    title: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "kids",
-    cover: p35_img,
-    price: 85.0,
-    newPrice: 120.5,
-    date: "8/5/2024",
-    exclusive: false,
-  },
-  {
-    id: 36,
-    title: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "kids",
-    cover: p36_img,
+    cover: MenCover_1,
     price: 85.0,
     newPrice: 120.5,
     date: "8/5/2024",

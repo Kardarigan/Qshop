@@ -39,6 +39,7 @@
 
 .exclusive {
     background-color: $color_background_2nd;
+    border-radius: 30px;
 
     h3 {
         mix-blend-mode: difference;
@@ -48,6 +49,7 @@
 
 .newsLetter {
     background-color: $color_background_2nd;
+    border-radius: 30px;
 
     h3 {
         mix-blend-mode: difference;

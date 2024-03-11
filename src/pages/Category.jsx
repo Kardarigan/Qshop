@@ -1,7 +1,7 @@
 import React from "react";
 import Products from "../comps/functions/Products";
 
-export default function Category({ category, banner }) {
+export default function Category({ category, banner, title }) {
 
     const headerStyle = {
         backgroundImage: `url(${banner})`,
@@ -11,7 +11,7 @@ export default function Category({ category, banner }) {
         <section className="category">
             <div className="header text-center my-5" style={headerStyle}>
                 <div>
-                    <h1>ALL GARMENTS FOR {category.toUpperCase()}</h1>
+                    <h1>{title.toUpperCase()}</h1>
                     <hr className="w-25 mx-auto" />
                 </div>
             </div>
