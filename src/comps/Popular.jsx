@@ -4,7 +4,7 @@ import Products from "./functions/Products";
 export default function Popular() {
     return (
         <>
-            <section className="py-5">
+            <section className="py-5 mt-3">
                 <h3>. POPULAR BY WOMEN</h3>
                 <hr />
                 <div className="row gy-3">

@@ -1,0 +1,13 @@
+.login {
+    min-height: 100vh;
+    color: $color_text_2nd;
+
+    .form {
+        max-width: 500px;
+        background-color: $color_background_2nd;
+    }
+
+    hr {
+        color: $color_background_2nd;
+    }
+}

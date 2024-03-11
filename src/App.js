@@ -5,6 +5,7 @@ import Layout from "./comps/Layout";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Product from "./pages/Product";
 import Qara from "./pages/Qara";
 import WomenBanner from './comps/assets/hero/slider-2.png';
@@ -22,6 +23,7 @@ function App() {
           <Route path='/Kids' element={<Category category="KIDS" banner={KidsBanner} title="Cute and Comfortable Kids' Clothing" />} />
           <Route path='/Qara' element={<Qara />} />
           <Route path='/Login' element={<Login />} />
+          <Route path='/Register' element={<Register />} />
           <Route path='/' element={<Product />}>
             <Route path=':productId' element={<Product />} />
           </Route>

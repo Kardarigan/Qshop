@@ -3,7 +3,7 @@ import React from "react";
 export default function Card(product) {
     return (
         <div className="col-lg-3 col-md-4 col-6">
-            <div className="card">
+            <div className="qard">
                 <img src={product.cover} alt={product.title} />
                 <div className="p-2">
                     <h2>{product.title}</h2>

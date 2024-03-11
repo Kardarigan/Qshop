@@ -3,20 +3,37 @@ import Products from "../comps/functions/Products";
 
 export default function Category({ category, banner, title }) {
 
-    const headerStyle = {
+    const bannerStyle = {
         backgroundImage: `url(${banner})`,
     };
 
     return (
         <section className="category">
-            <div className="header text-center my-5" style={headerStyle}>
+            <div className="header text-center" style={bannerStyle}>
                 <div>
                     <h1>{title.toUpperCase()}</h1>
                     <hr className="w-25 mx-auto" />
                 </div>
             </div>
-            <div className="row gy-3 py-5">
+            <div className="d-flex justify-content-between pt-5 mt-5">
+                <p>
+                    24 from 144 items are shown
+                </p>
+                <div>
+                    <span>Sort By: </span>
+                    <select name="sort by" id="">
+                        <option value="Newest">Newest</option>
+                        <option value="Oldest">Oldest</option>
+                        <option value="Price: High to Low">Price: High to Low</option>
+                        <option value="Price: Low to High">Price: Low to High</option>
+                    </select>
+                </div>
+            </div>
+            <hr className="mt-0" />
+
+            <div className="row gy-3 py-5 mt-3">
                 <Products category={category.toLowerCase()} />
+
             </div>
         </section>
     );

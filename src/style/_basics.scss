@@ -1,6 +1,5 @@
 $color_prime: #15F5BA;
 $color_prime_hover: lighten($color_prime, 2);
-$color_second: #836FFF;
 $color_dark: #211951;
 $color_dark_hover: lighten($color_dark, 0.8);
 $color_light: #F0F3FF;
@@ -25,7 +24,7 @@ $color_background_2nd: $color_light;
             color: $color_text_2nd;
 
             &:hover {
-                color: $color_text_2nd_hover;
+                color: $color_prime;
             }
         }
     }
@@ -34,7 +33,6 @@ $color_background_2nd: $color_light;
         text-align: justify;
     }
 }
-
 
 .flexCentralizer {
     display: flex;
@@ -67,12 +65,12 @@ $color_background_2nd: $color_light;
     }
 
     &-classic {
-        border: 1px solid $color_prime;
-        color: $color_prime;
-        background-color: $color_dark;
+        border: 1px solid $color_text_2nd;
+        color: $color_text_2nd;
+        background-color: $color_prime;
 
         &:hover {
-            background-color: $color_dark_hover;
+            background-color: $color_prime_hover;
             box-shadow: 0 0 10px 0 rgba($color_prime, 0.5);
         }
     }
@@ -100,7 +98,7 @@ $color_background_2nd: $color_light;
 .field {
     all: unset;
     color: $color_text_2nd;
-    width: calc(100% - 50px);
+    width: calc(100% - 42px);
     padding: 12px 20px;
     border: 1px solid $color_background;
     background-color: transparent;
