@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Products from "../comps/functions/Products";
 
 export default function Category({ category, banner, title }) {
@@ -34,8 +34,7 @@ export default function Category({ category, banner, title }) {
             <hr className="mt-0" />
 
             <div className="row gy-3 py-5 mt-3">
-                <Products category={category.toLowerCase()} setProductsNum={setProductNum} />
-
+            <Products category={category.toLowerCase()} setProductsNum={(num) => setProductNum(num)} />
             </div>
         </section>
     );

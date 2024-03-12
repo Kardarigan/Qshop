@@ -2,6 +2,7 @@ import React from "react";
 import Products from "./functions/Products";
 
 export default function Popular() {
+
     return (
         <>
             <section className="py-5 mt-3">
