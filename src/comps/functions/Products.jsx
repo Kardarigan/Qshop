@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Data from "../assets/all_product"
 import Card from "../Card";
 
-const Products = ({ category, slice = 0 }) => {
+const Products = ({ category, slice = 0, setProductsNum }) => {
     const products = Data.filter((item) => item.category === category);
+    const productsNum = products.length;
+
+    useEffect(() => {
+        setProductsNum(productsNum);
+    }, [productsNum, setProductsNum]);
+
+
     if (slice != 0) {
         const slicedProducts = products.slice(-slice);
         return (
@@ -12,7 +19,7 @@ const Products = ({ category, slice = 0 }) => {
             ))
         );
     }
-    if (products.length === 0) {
+    if (productsNum === 0) {
         return (
             <h3 className="text-center fs-1 px-3 flexCentralizer" style={{ height: "80vh" }}>There is no any items in {category} Category for Now...</h3>
         )

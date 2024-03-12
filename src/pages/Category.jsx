@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Products from "../comps/functions/Products";
 
 export default function Category({ category, banner, title }) {
+
+    const [productNum, setProductNum] = useState(0);
 
     const bannerStyle = {
         backgroundImage: `url(${banner})`,
@@ -17,7 +19,7 @@ export default function Category({ category, banner, title }) {
             </div>
             <div className="d-flex justify-content-between pt-5 mt-5">
                 <p>
-                    24 from 144 items are shown
+                    24 from {productNum} items are shown
                 </p>
                 <div>
                     <span>Sort By: </span>
@@ -32,7 +34,7 @@ export default function Category({ category, banner, title }) {
             <hr className="mt-0" />
 
             <div className="row gy-3 py-5 mt-3">
-                <Products category={category.toLowerCase()} />
+                <Products category={category.toLowerCase()} setProductsNum={setProductNum} />
 
             </div>
         </section>
