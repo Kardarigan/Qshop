@@ -1,0 +1,13 @@
+.breadcrumb {
+    a {
+        color: $color_text;
+
+        &:hover {
+            color: $color_prime;
+        }
+    }
+
+    &:not(a) {
+        cursor: default;
+    }
+}

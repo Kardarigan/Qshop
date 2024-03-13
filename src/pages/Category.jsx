@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Products from "../comps/functions/Products";
+import Breadcrumb from "../comps/Breadcrumb";
 
 export default function Category({ category, banner, title }) {
 
@@ -17,7 +18,8 @@ export default function Category({ category, banner, title }) {
                     <hr className="w-25 mx-auto" />
                 </div>
             </div>
-            <div className="d-flex justify-content-between pt-5 mt-5">
+            <div className="d-flex justify-content-between mt-5 pt-2">
+                <Breadcrumb category={category} />
                 <p>
                     24 from {productNum} items are shown
                 </p>
@@ -34,7 +36,7 @@ export default function Category({ category, banner, title }) {
             <hr className="mt-0" />
 
             <div className="row gy-3 py-5 mt-3">
-            <Products category={category.toLowerCase()} setProductsNum={(num) => setProductNum(num)} />
+                <Products category={category.toLowerCase()} setProductsNum={(num) => setProductNum(num)} />
             </div>
         </section>
     );

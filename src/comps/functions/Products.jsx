@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Data from "../assets/all_product"
 import Card from "../Card";
 
-const Products = ({ category, slice = 0, setProductsNum = () => {} }) => {
+const Products = ({ category, slice = 0, setProductsNum = () => { } }) => {
     const products = Data.filter((item) => item.category === category);
     const productsNum = products.length;
 
@@ -15,7 +15,7 @@ const Products = ({ category, slice = 0, setProductsNum = () => {} }) => {
         const slicedProducts = products.slice(-slice);
         return (
             slicedProducts.map((item, index) => (
-                <Card key={index} title={item.title} cover={item.cover} price={item.price} date={item.date} />
+                <Card key={index} id={item.id} title={item.title} category={item.category} cover={item.cover} price={item.price} date={item.date} />
             ))
         );
     }
@@ -26,7 +26,7 @@ const Products = ({ category, slice = 0, setProductsNum = () => {} }) => {
     }
     return (
         products.map((item, index) => (
-            <Card key={index} title={item.title} cover={item.cover} price={item.price} date={item.date} />
+            <Card key={index} id={item.id} title={item.title} category={item.category} cover={item.cover} price={item.price} date={item.date} />
         ))
     );
 };

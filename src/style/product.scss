@@ -1,0 +1,21 @@
+.details {
+    .gallery {
+        &-thumb {
+            img {
+                width: 80px;
+                max-height: 100px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-main {
+            img {
+                width: 100%;
+                max-height: 600px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

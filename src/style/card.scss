@@ -18,22 +18,29 @@
     span {
 
         &:first-child {
-            color: $color_text_2nd;
+            color: $color_text;
+            mix-blend-mode: difference;
             font-weight: 800;
 
         }
 
         &:last-child {
-            color: $color_text_2nd_hover;
+            color: darken($color_prime, 10);
             font-size: 0.8em;
         }
     }
 
     hr {
         margin: 10px 0;
+        border-color: $color_background_2nd;
     }
 
     &:hover {
         transform: translateY(10px);
+        background-color: rgba($color_background_2nd, 0.2);
+
+        h2 {
+            color: $color_prime;
+        }
     }
 }

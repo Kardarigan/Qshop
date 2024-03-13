@@ -35,6 +35,10 @@
                 }
             }
         }
+
+        &__pagination {
+            mix-blend-mode: difference;
+        }
     }
 
 }
