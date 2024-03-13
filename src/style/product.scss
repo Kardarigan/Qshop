@@ -18,4 +18,36 @@
             }
         }
     }
+
+    &-content {
+        .sizes {
+            display: flex;
+
+            label {
+                button {
+                    all: unset;
+                    display: block;
+                    height: 30px;
+                    padding: 10px 20px;
+                    color: $color_text;
+                    border: 1px solid $color_text;
+                    transition: 0.2s;
+
+                    &:hover {
+                        box-shadow: 0 0 5px 0 $color_prime;
+                    }
+                }
+
+                input {
+                    display: none;
+
+                    &:checked {
+                        ~button {
+                            background-color: $color_prime;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

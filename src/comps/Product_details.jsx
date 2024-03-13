@@ -18,19 +18,24 @@ export default function Product_details(props) {
                 <div className="col-lg-5 gallery-main">
                     <img src={product.cover} alt={product.title} />
                 </div>
-                <div className="col-lg-6 d-flex justify-content-between flex-column">
+                <div className="col-lg-6 d-flex justify-content-between flex-column details-content">
                     <h1>{product.title}</h1>
                     <h2>
                         {product.oldPrice ? <><del>${product.oldPrice}</del>${product.price}</> : <>${product.price}</>}
                     </h2>
                     {product.express && <h4><i class="fal fa-shipping-fast me-2" />Express Delivery</h4>}
-                    <div className="sizes">
+                    <form className="sizes">
                         {product.sizes.map((size) => (
-                            <label htmlFor={`buttonSize${size}`} >
-                                <input type="radio" />
+                            <label htmlFor={`buttonSize${size}`} key={size}>
+                                <input
+                                    id={`buttonSize${size}`}
+                                    name={`buttonSize${size}`}
+                                    type="radio"
+                                />
+                                <button type="button">{size}</button>
                             </label>
                         ))}
-                    </div>
+                    </form>
                     <div className="addToCart">
 
                     </div>
