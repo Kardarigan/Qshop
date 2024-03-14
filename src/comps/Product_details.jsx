@@ -8,6 +8,7 @@ export default function Product_details(props) {
     const [count, setCount] = useState(0);
     const [message, setMessage] = useState("");
     const [selectedSize, setSelectedSize] = useState(null);
+    const [selectedColor, setSelectedColor] = useState(null);
 
     const fullStars = Array(product.rate).fill(true);
     const emptyStars = Array(5 - product.rate).fill(false);
@@ -50,7 +51,7 @@ export default function Product_details(props) {
                 </div>
                 <div className="col-lg-6 d-flex justify-content-between flex-column details-content">
                     <div>
-                        <h1>{product.title}</h1>
+                        <h1 className="mt-lg-0 mt-4">{product.title}</h1>
                         <div className="rate my-2">
                             {fullStars.map((index) => (
                                 <i class="fa-solid fa-star" key={index} />
@@ -77,6 +78,25 @@ export default function Product_details(props) {
                                     />
                                     <button type="button" onClick={() => setSelectedSize(size)}>
                                         {size}
+                                    </button>
+                                </label>
+                            ))}
+                        </form>
+                        <form className="colors my-3">
+                            {product.colors.map((color) => (
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value={color}
+                                        checked={selectedColor === color}
+                                        onChange={() => setSelectedColor(color)}
+                                        required
+                                    />
+                                    <button type="button" onClick={() => setSelectedColor(color)}>
+                                        {color}
+                                        <svg className="ms-2" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="50%" cx="50%" cy="50%" fill={color} />
+                                        </svg>
                                     </button>
                                 </label>
                             ))}

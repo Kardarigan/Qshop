@@ -1,16 +1,17 @@
 import React, { useContext } from "react";
-import all_product from "../comps/assets/all_product";
+import Data from "../comps/assets/all_product";
 import { useParams } from "react-router-dom";
-import Breadcrumb from "../comps/Breadcrumb";
 import Product_details from "../comps/Product_details";
+import Product_Discribtion from "../comps/Product_Discribtion";
 
 export default function Single() {
 
     const { productId } = useParams();
-    const product = all_product.find((e) => e.id === Number(productId))
+    const product = Data.find((e) => e.id === Number(productId))
     return (
         <>
             <Product_details product={product} />
+            <Product_Discribtion product={product} />
         </>
     );
 }
