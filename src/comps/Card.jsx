@@ -13,7 +13,19 @@ export default function Card(product) {
                         <h2>{product.title}</h2>
                         <hr />
                         <div className="d-flex justify-content-between">
-                            <span>${product.price}</span>
+                            <span>
+                                {product.oldPrice ? (
+                                    <>
+                                        <del>${product.oldPrice}</del>
+                                        ${product.price}
+                                        <span>
+                                            {Math.round((product.oldPrice - product.price) / product.oldPrice * 100)}% OFF
+                                        </span>
+                                    </>
+                                ) : (
+                                    <>${product.price}</>
+                                )}
+                            </span>
                             <span>{product.date}</span>
                         </div>
                     </div>
