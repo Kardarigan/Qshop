@@ -20,6 +20,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 2,
@@ -32,6 +33,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 4,
@@ -54,6 +57,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 5,
@@ -66,6 +70,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 6,
@@ -77,6 +82,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 7,
@@ -89,6 +95,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 8,
@@ -101,6 +108,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 9,
@@ -112,6 +120,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 10,
@@ -124,6 +133,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 11,
@@ -135,6 +145,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 12,
@@ -147,6 +158,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 13,
@@ -158,6 +170,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 14,
@@ -169,6 +182,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 15,
@@ -181,6 +195,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 16,
@@ -192,6 +207,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 17,
@@ -203,6 +219,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 18,
@@ -215,6 +232,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 19,
@@ -226,6 +244,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 20,
@@ -237,6 +256,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: true,
+    quantity: 12,
   },
   {
     id: 21,
@@ -248,6 +268,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 22,
@@ -259,6 +280,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 23,
@@ -270,6 +292,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 24,
@@ -282,6 +305,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 25,
@@ -294,6 +318,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 26,
@@ -305,6 +330,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 27,
@@ -316,6 +342,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 28,
@@ -327,6 +354,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 29,
@@ -338,6 +366,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 30,
@@ -349,6 +378,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 31,
@@ -361,6 +391,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
   {
     id: 32,
@@ -372,6 +403,7 @@ let all_product = [
     date: "8/5/2024",
     express: true,
     exclusive: false,
+    quantity: 12,
   },
 ];
 

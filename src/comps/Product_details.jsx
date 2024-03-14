@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Breadcrumb from "./Breadcrumb";
+import Message from "./Message";
 
 export default function Product_details(props) {
     const { product } = props;
+    const [count, setCount] = useState(0);
+    const [message, setMessage] = useState("");
+
+    const handleDecrement = () => {
+        if (count > 0) {
+            setCount(count - 1);
+        }
+
+    };
+
+    const handleIncrement = () => {
+        if (count < product.quantity) {
+            setCount(count + 1);
+            setMessage("");
+        } else if (message) {
+            return
+        } else {
+            setMessage("Maximum number reached!");
+            setTimeout(() => {
+                setMessage("");
+            }, 3000);
+        }
+    };
 
     return (
         <section className="details py-5">
@@ -37,7 +61,10 @@ export default function Product_details(props) {
                         ))}
                     </form>
                     <div className="addToCart">
-
+                        <button className="button button-classic" onClick={handleDecrement}>-</button>
+                        <span className="flexCentralizer">{count}</span>
+                        <button className="button button-classic" onClick={handleIncrement}>+</button>
+                        <Message message={message} show={message.length > 0} />
                     </div>
 
                 </div>
