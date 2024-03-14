@@ -9,6 +9,8 @@ export default function Product_details(props) {
     const [message, setMessage] = useState("");
     const [selectedSize, setSelectedSize] = useState(null);
 
+    const fullStars = Array(product.rate).fill(true);
+    const emptyStars = Array(5 - product.rate).fill(false);
 
     const handleDecrement = () => {
         if (count > 0) {
@@ -35,7 +37,7 @@ export default function Product_details(props) {
     return (
         <section className="details py-5">
             <Breadcrumb product={product} />
-            <div className="row mt-5 gx-3 gallery">
+            <div className="row mt-5 gx-3">
                 <div className="col-lg-1 col-2 d-flex justify-content-between flex-column gallery-thumb">
                     <img src={product.cover} alt={product.title} />
                     <img src={product.cover} alt={product.title} />
@@ -49,6 +51,14 @@ export default function Product_details(props) {
                 <div className="col-lg-6 d-flex justify-content-between flex-column details-content">
                     <div>
                         <h1>{product.title}</h1>
+                        <div className="rate my-2">
+                            {fullStars.map((index) => (
+                                <i class="fa-solid fa-star" key={index} />
+                            ))}
+                            {emptyStars.map((index) => (
+                                <i class="fa-light fa-star" key={index + fullStars.length} />
+                            ))}
+                        </div>
                         <h2>
                             {product.oldPrice ? <><del>${product.oldPrice}</del>${product.price}<span>{Math.round((product.oldPrice - product.price) / product.oldPrice * 100)}% OFF</span></> : <>${product.price}</>}
                         </h2>
