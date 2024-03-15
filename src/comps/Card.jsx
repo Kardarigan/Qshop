@@ -6,7 +6,7 @@ export default function Card(product) {
 
     return (
         <div className="col-lg-3 col-md-4 col-6">
-            <Link to={`/${category}/Product/${product.id}`}>
+            <Link to={`/${category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>
                 <div className="qard">
                     <img src={product.cover} alt={product.title} />
                     <div className="p-2">

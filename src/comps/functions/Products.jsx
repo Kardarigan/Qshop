@@ -2,22 +2,29 @@ import React, { useEffect } from "react";
 import Data from "../assets/all_product"
 import Card from "../Card";
 
-const Products = ({ category, slice = 0, setProductsNum = () => { } }) => {
-    const products = Data.filter((item) => item.category === category);
+const Products = ({ category = false, brand = false, slice = 0, setProductsNum = () => { } }) => {
+    const products = category !== false ? Data.filter((item) => item.category === category) : Data;
     const productsNum = products.length;
+
+    function cardMap(targets) {
+        return (
+            targets.map((item, index) => (
+                <Card key={index} id={item.id} title={item.title} category={item.category} cover={item.cover} price={item.price} date={item.date} />
+            ))
+        );
+    }
 
     useEffect(() => {
         setProductsNum(productsNum);
     }, [productsNum, setProductsNum]);
 
-
-    if (slice != 0) {
+    if (slice) {
         const slicedProducts = products.slice(-slice);
-        return (
-            slicedProducts.map((item, index) => (
-                <Card key={index} id={item.id} title={item.title} category={item.category} cover={item.cover} price={item.price} date={item.date} />
-            ))
-        );
+        return cardMap(slicedProducts)
+    }
+    if (brand) {
+        const theBrandProducts = products.filter(item => item.brand === brand);
+        return cardMap(theBrandProducts)
     }
     if (productsNum === 0) {
         return (
@@ -25,9 +32,7 @@ const Products = ({ category, slice = 0, setProductsNum = () => { } }) => {
         )
     }
     return (
-        products.map((item, index) => (
-            <Card key={index} id={item.id} title={item.title} category={item.category} cover={item.cover} price={item.price} date={item.date} />
-        ))
+        cardMap(products)
     );
 };
 

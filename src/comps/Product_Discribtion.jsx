@@ -1,5 +1,6 @@
 import React from "react";
 import Brands from "./assets/all_brands"
+import Products from "./functions/Products";
 
 export default function Product_Discribtion(props) {
     const { product } = props;
@@ -50,7 +51,13 @@ export default function Product_Discribtion(props) {
                     </div>
                 </div>
             </div>
-            <div className="related"></div>
+            <div className="related">
+                <h3>. RELATED PRODUCTS</h3>
+                <hr />
+                <div className="row gy-3">
+                    <Products category={product.category} brand={product.brand} slice="4" />
+                </div>
+            </div>
         </section>
     );
 }
