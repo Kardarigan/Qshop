@@ -50,6 +50,7 @@ export default function Product_Discribtion(props) {
                     </div>
                 </div>
             </div>
+            <div className="related"></div>
         </section>
     );
 }

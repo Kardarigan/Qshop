@@ -22,8 +22,15 @@ export default function Product_details(props) {
 
     const handleIncrement = () => {
         if (count < product.quantity) {
-            setCount(count + 1);
-            setMessage("");
+            if (count === 0) {
+                setMessage("Added to your Cart");
+                setTimeout(() => {
+                    setMessage("");
+                }, 3000);
+                setCount(count + 1);
+            } else {
+                setCount(count + 1);
+            }
         } else if (message) {
             return
         } else {
@@ -37,6 +44,7 @@ export default function Product_details(props) {
 
     return (
         <section className="details py-5">
+            <Message message={message} show={message.length > 0} />
             <Breadcrumb product={product} />
             <div className="row mt-5 gx-3">
                 <div className="col-lg-1 col-2 d-flex justify-content-between flex-column gallery-thumb">
@@ -105,7 +113,6 @@ export default function Product_details(props) {
                             <button className="button button-classic" onClick={handleDecrement}>-</button>
                             <span className="flexCentralizer">{count}</span>
                             <button className="button button-classic" onClick={handleIncrement}>+</button>
-                            <Message message={message} show={message.length > 0} />
                         </div>
                     </div>
                 </div>
