@@ -60,7 +60,7 @@ $color_background_2nd: $color_light;
 
 
     &:active {
-        outline: 1px solid $color_background;
+        outline: 1px solid rgba($color_background_2nd, 0.5) !important;
     }
 
     &-classic {
@@ -70,6 +70,17 @@ $color_background_2nd: $color_light;
 
         &:hover {
             background-color: $color_prime_hover;
+            box-shadow: 0 0 10px 0 rgba($color_prime, 0.5);
+        }
+    }
+
+    &-outline {
+        border: 1px solid $color_background_2nd;
+        color: $color_prime;
+        background-color: transparent;
+
+        &:hover {
+            background-color: rgba($color_background_2nd, 0.2);
             box-shadow: 0 0 10px 0 rgba($color_prime, 0.5);
         }
     }

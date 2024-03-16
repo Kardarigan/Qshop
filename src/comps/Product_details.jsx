@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Breadcrumb from "./Breadcrumb";
 import Message from "./Message";
+import { TheContext } from "./functions/TheContext";
 
 export default function Product_details(props) {
 
     const { product } = props;
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
     const [message, setMessage] = useState("");
     const [selectedSize, setSelectedSize] = useState(null);
     const [selectedColor, setSelectedColor] = useState(null);
+    const { addToCart } = useContext(TheContext)
 
     const fullStars = Array(product.rate).fill(true);
     const emptyStars = Array(5 - product.rate).fill(false);
@@ -22,15 +24,7 @@ export default function Product_details(props) {
 
     const handleIncrement = () => {
         if (count < product.quantity) {
-            if (count === 0) {
-                setMessage("Added to your Cart");
-                setTimeout(() => {
-                    setMessage("");
-                }, 3000);
-                setCount(count + 1);
-            } else {
-                setCount(count + 1);
-            }
+            setCount(count + 1);
         } else if (message) {
             return
         } else {
@@ -39,6 +33,13 @@ export default function Product_details(props) {
                 setMessage("");
             }, 3000);
         }
+    };
+
+    const handleAddToCart = () => {
+        setMessage("Added to your Cart");
+        setTimeout(() => {
+            setMessage("");
+        }, 3000);
     };
 
 
@@ -75,8 +76,8 @@ export default function Product_details(props) {
                     <div>
                         {product.express && <h4><i class="fal fa-shipping-fast me-2" />Express Delivery</h4>}
                         <form className="sizes my-3">
-                            {product.sizes.map((size) => (
-                                <label>
+                            {product.sizes.map((size, index) => (
+                                <label key={index}>
                                     <input
                                         type="radio"
                                         value={size}
@@ -91,8 +92,8 @@ export default function Product_details(props) {
                             ))}
                         </form>
                         <form className="colors my-3">
-                            {product.colors.map((color) => (
-                                <label>
+                            {product.colors.map((color, index) => (
+                                <label key={index}>
                                     <input
                                         type="radio"
                                         value={color}
@@ -113,6 +114,10 @@ export default function Product_details(props) {
                             <button className="button button-classic" onClick={handleDecrement}>-</button>
                             <span className="flexCentralizer">{count}</span>
                             <button className="button button-classic" onClick={handleIncrement}>+</button>
+                            <button className="button button-outline" onClick={() => {
+                                handleAddToCart();
+                                addToCart(product.id, count);
+                            }}>ADD</button>
                         </div>
                     </div>
                 </div>

@@ -55,7 +55,7 @@ export default function Product_Discribtion(props) {
                 <h3>. RELATED PRODUCTS</h3>
                 <hr />
                 <div className="row gy-3">
-                    <Products brand={product.brand} slice="3" />
+                    <Products brand={product.brand} slice="4" />
                 </div>
             </div>
         </section>

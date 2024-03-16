@@ -126,8 +126,17 @@
             align-items: center;
 
             button {
-                padding: 10px;
-                border: 1px solid $color_prime;
+                &:not(:last-child) {
+                    padding: 10px;
+                    border: 1px solid $color_prime;
+                }
+
+                &:last-child {
+                    margin-left: 5px;
+                    height: 100%;
+                    border: 1px solid $color_prime;
+
+                }
             }
 
             span {

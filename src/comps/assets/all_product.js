@@ -12,6 +12,8 @@ import qara_1 from "./products/qara-product-01.jpg";
 import qara_2 from "./products/qara-product-02.jpg";
 import qara_3 from "./products/qara-product-03.jpg";
 import qara_4 from "./products/qara-product-04.jpg";
+import qara_5 from "./products/qara-product-05.jpg";
+import qara_6 from "./products/qara-product-06.jpg";
 
 let all_product = [
   {
@@ -598,6 +600,38 @@ let all_product = [
     date: "8/8/2024",
     express: true,
     quantity: 11,
+  },
+  {
+    id: 37,
+    title: "WDIRARA Women's Contrast Lace Cut Out Top",
+    category: "women",
+    cover: qara_5,
+    price: 88.14,
+    sizes: ['XS', 'S', 'L'],
+    colors: ['Black', 'White', 'Gray'],
+    fabric: 'Polyester',
+    brand: 'Qara',
+    rate: 5,
+    describe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    date: "8/8/2024",
+    express: true,
+    quantity: 3,
+  },
+  {
+    id: 38,
+    title: "Artfish Women's Sleeveless Tank Top Form Fitting Scoop",
+    category: "women",
+    cover: qara_6,
+    price: 88.14,
+    sizes: ['XS', 'S', 'L'],
+    colors: ['Black', 'Gray'],
+    fabric: 'Polyester',
+    brand: 'Qara',
+    rate: 5,
+    describe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    date: "8/8/2024",
+    express: true,
+    quantity: 7,
   },
 ];
 
