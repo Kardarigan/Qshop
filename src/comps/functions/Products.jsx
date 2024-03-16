@@ -18,21 +18,24 @@ const Products = ({ category = false, brand = false, slice = 0, setProductsNum =
         setProductsNum(productsNum);
     }, [productsNum, setProductsNum]);
 
+    let filteredProducts = products;
+
     if (slice) {
-        const slicedProducts = products.slice(-slice);
-        return cardMap(slicedProducts)
+        filteredProducts = filteredProducts.slice(-slice);
     }
+
     if (brand) {
-        const theBrandProducts = products.filter(item => item.brand === brand);
-        return cardMap(theBrandProducts)
+        filteredProducts = filteredProducts.filter(item => item.brand === brand);
     }
-    if (productsNum === 0) {
+
+    if (filteredProducts.length === 0) {
         return (
             <h3 className="text-center fs-1 px-3 flexCentralizer" style={{ height: "80vh" }}>There is no any items in {category} Category for Now...</h3>
         )
     }
+
     return (
-        cardMap(products)
+        cardMap(filteredProducts)
     );
 };
 
