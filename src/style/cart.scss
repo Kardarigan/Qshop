@@ -1,0 +1,54 @@
+.cart {
+    &-card {
+        width: 90%;
+        max-width: 1000px;
+        height: 290px;
+
+        img {
+            width: 200px;
+            height: 290px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        h2 a {
+            color: $color_text;
+
+            &:hover {
+                color: $color_prime;
+            }
+        }
+
+        .addToCart {
+            display: flex;
+            align-items: center;
+
+            button {
+                padding: 10px;
+                border: 1px solid $color_prime;
+            }
+
+            span {
+                width: 50px;
+                color: $color_prime;
+                border: 1px solid $color_prime;
+                padding: 10px;
+            }
+        }
+    }
+
+    button:has(.fa-xmark) {
+        width: 10%;
+        border: 1px solid $color_background_2nd;
+        color: $color_text;
+        background: transparent;
+
+        i {
+            font-size: 30px;
+        }
+
+        &:hover {
+            background-color: rgba(rgb(253, 62, 120), 0.5);
+        }
+    }
+}

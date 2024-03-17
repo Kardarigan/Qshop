@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import all_product from "../assets/all_product"
 
 export const TheContext = createContext(null);
@@ -9,7 +8,7 @@ const getDefaultCart = () => {
     for (let i = 0; i < all_product.length + 1; i++) {
         cart[i] = 0
     }
-    return cart
+    return cart;
 }
 
 const TheContextProvider = (props) => {
