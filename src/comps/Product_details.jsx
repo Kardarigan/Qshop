@@ -10,7 +10,9 @@ export default function Product_details(props) {
     const [message, setMessage] = useState("");
     const [selectedSize, setSelectedSize] = useState(null);
     const [selectedColor, setSelectedColor] = useState(null);
-    const { addToCart } = useContext(TheContext)
+    const { addToCart } = useContext(TheContext);
+    const [addToCartFirstClick, setAddToCartFirstClick] = useState(false);
+
 
     const fullStars = Array(product.rate).fill(true);
     const emptyStars = Array(5 - product.rate).fill(false);
@@ -43,6 +45,7 @@ export default function Product_details(props) {
             }, 3000);
             return;
         } else {
+            setAddToCartFirstClick(true);
             setMessage("Added to your Cart");
             setTimeout(() => {
                 setMessage("");
@@ -125,7 +128,7 @@ export default function Product_details(props) {
                             <span className="flexCentralizer">{count}</span>
                             <button className="button button-classic" onClick={handleIncrement}>+</button>
                             <button className="button button-outline" onClick={handleAddToCart}>
-                                ADD
+                                {addToCartFirstClick ? "CHANGE QUANTITY" : "ADD"}
                             </button>
                         </div>
                     </div>
