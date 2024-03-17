@@ -35,30 +35,32 @@ export default function Cart() {
             <h1 className="py-3">Shopping Cart: </h1>
             <hr className="mt-0" />
             {all_product.map((product, index) => {
-                return (
-                    <div className="d-flex justify-content-between mt-3" key={index}>
-                        <div className="cart-card d-flex">
-                            <Link to={`/${product.category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>
-                                <img src={product.cover} alt={product.title} />
-                            </Link>
-                            <div className="ms-2">
-                                <h2><Link to={`/${product.category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>{product.title}</Link></h2>
-                                <p className="mb-2">${product.price}</p>
-                                <p className="mb-2">Size: {product.selectedSize}</p>
-                                <p className="mb-2">Color: {product.selectedColor}</p>
-                                <p className="mb-2">{product.brand}</p>
-                                <div className="addToCart">
-                                    <button className="button button-classic" onClick={() => dicreasProduct(product.id)}>-</button>
-                                    <span className="flexCentralizer">{cartItems[product.id]}</span>
-                                    <button className="button button-classic" onClick={() => increasProduct(product.id)}>+</button>
+                if (cartItems[product.id]) {
+                    return (
+                        <div className="d-flex justify-content-between mt-3" key={index}>
+                            <div className="cart-card d-flex">
+                                <Link to={`/${product.category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>
+                                    <img src={product.cover} alt={product.title} />
+                                </Link>
+                                <div className="ms-2">
+                                    <h2><Link to={`/${product.category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>{product.title}</Link></h2>
+                                    <p className="mb-2">${product.price}</p>
+                                    <p className="mb-2">Size: {product.selectedSize}</p>
+                                    <p className="mb-2">Color: {product.selectedColor}</p>
+                                    <p className="mb-2">{product.brand}</p>
+                                    <div className="addToCart">
+                                        <button className="button button-classic" onClick={() => dicreasProduct(product.id)}>-</button>
+                                        <span className="flexCentralizer">{cartItems[product.id]}</span>
+                                        <button className="button button-classic" onClick={() => increasProduct(product.id)}>+</button>
+                                    </div>
                                 </div>
                             </div>
+                            <button onClick={() => removeFromCart(product.id)}>
+                                <i className="fal fa-xmark" />
+                            </button>
                         </div>
-                        <button onClick={() => removeFromCart(product.id)}>
-                            <i className="fal fa-xmark" />
-                        </button>
-                    </div>
-                )
+                    )
+                }
             })}
             {!cartItems &&
                 <h3> Your Shopping Cart is empty</h3>

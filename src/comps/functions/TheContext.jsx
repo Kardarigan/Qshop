@@ -28,14 +28,15 @@ const TheContextProvider = (props) => {
     };
 
     const removeFromCart = (productID) => {
-        setCartItems((prev) => ({ ...prev, [productID]: prev[productID] = 0 }));
+        setCartItems((prev) => ({ ...prev, [productID]: 0 }));
     }
 
     const increasProduct = (productID) => {
-        setCartItems((prev) => ({ ...prev, [productID]: prev[productID] + 1 }));
+        setCartItems((prev) => ({ ...prev, [productID]: { ...prev[productID], count: prev[productID].count + 1 } }));
     }
+
     const dicreasProduct = (productID) => {
-        setCartItems((prev) => ({ ...prev, [productID]: prev[productID] - 1 }));
+        setCartItems((prev) => ({ ...prev, [productID]: { ...prev[productID], count: prev[productID].count - 1 } }));
     }
 
     useEffect(() => {
