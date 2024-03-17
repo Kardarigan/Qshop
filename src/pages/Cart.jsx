@@ -37,16 +37,16 @@ export default function Cart() {
             {all_product.map((product, index) => {
                 return (
                     <div className="d-flex justify-content-between mt-3" key={index}>
-                        <div className="cart-card d-flex justify-content-between">
+                        <div className="cart-card d-flex">
                             <Link to={`/${product.category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>
                                 <img src={product.cover} alt={product.title} />
                             </Link>
                             <div className="ms-2">
                                 <h2><Link to={`/${product.category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>{product.title}</Link></h2>
-                                <p>${product.price}</p>
-                                <p>Size: {product.selectedSize}</p>
-                                <p>Color: {product.selectedColor}</p>
-                                <p>{product.brand}</p>
+                                <p className="mb-2">${product.price}</p>
+                                <p className="mb-2">Size: {product.selectedSize}</p>
+                                <p className="mb-2">Color: {product.selectedColor}</p>
+                                <p className="mb-2">{product.brand}</p>
                                 <div className="addToCart">
                                     <button className="button button-classic" onClick={() => dicreasProduct(product.id)}>-</button>
                                     <span className="flexCentralizer">{cartItems[product.id]}</span>
@@ -64,7 +64,8 @@ export default function Cart() {
                 <h3> Your Shopping Cart is empty</h3>
             }
             <hr />
-            <div className="d-flex justify-content-end">
+            <div className="d-flex align-items-center justify-content-between">
+                <button className="button button-classic">Go to Checkout</button>
                 <span>Total Price : ${totalPrice}</span>
             </div>
         </section >
