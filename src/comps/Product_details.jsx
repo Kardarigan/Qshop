@@ -36,10 +36,13 @@ export default function Product_details(props) {
     };
 
     const handleAddToCart = () => {
+        if (!selectedSize || !selectedColor) {
+            setMessage("Please select a size and color before adding to cart.");
+            return;
+        }
+
         setMessage("Added to your Cart");
-        setTimeout(() => {
-            setMessage("");
-        }, 3000);
+        addToCart(product.id, count, selectedSize, selectedColor);
     };
 
 
@@ -114,10 +117,9 @@ export default function Product_details(props) {
                             <button className="button button-classic" onClick={handleDecrement}>-</button>
                             <span className="flexCentralizer">{count}</span>
                             <button className="button button-classic" onClick={handleIncrement}>+</button>
-                            <button className="button button-outline" onClick={() => {
-                                handleAddToCart();
-                                addToCart(product.id, count);
-                            }}>ADD</button>
+                            <button className="button button-outline" onClick={handleAddToCart}>
+                                {message ? message : "ADD"}
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -6,11 +6,12 @@ import Home from "./pages/Home";
 import Category from "./pages/Category";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Cart from "./pages/Cart";
 import Qara from "./pages/Qara";
+import Single from "./pages/Single";
 import WomenBanner from './comps/assets/hero/slider-2.png';
 import MenBanner from './comps/assets/hero/slider-2.png';
 import KidsBanner from './comps/assets/hero/slider-2.png';
-import Single from "./pages/Single";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/Qara' element={<Qara />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Register' element={<Register />} />
+          <Route path='/Cart' element={<Cart />} />
           <Route path='/:category/Product' element={<Single />}>
             <Route path=':productId' element={<Single />} />
           </Route>
