@@ -1,18 +1,17 @@
 import React, { useState, useEffect, createContext } from "react";
-import all_product from "../assets/all_product"
+import allProduct from "../assets/allProduct";
 
 export const TheContext = createContext(null);
 
 const getDefaultCart = () => {
     let cart = {};
-    for (let i = 0; i < all_product.length + 1; i++) {
-        cart[i] = 0
+    for (let i = 0; i < allProduct.length; i++) {
+        cart[i] = {};
     }
     return cart;
-}
+};
 
 const TheContextProvider = (props) => {
-
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     const addToCart = (productID, count, selectedSize, selectedColor) => {
@@ -28,7 +27,7 @@ const TheContextProvider = (props) => {
     };
 
     const removeFromCart = (productID) => {
-        setCartItems((prev) => ({ ...prev, [productID]: 0 }));
+        setCartItems((prev) => ({ ...prev, [productID]: {} }))
     }
 
     const increasProduct = (productID) => {
@@ -44,7 +43,7 @@ const TheContextProvider = (props) => {
     }, [cartItems]);
 
     const contextValue = {
-        all_product,
+        allProduct,
         cartItems,
         addToCart,
         removeFromCart,
@@ -58,6 +57,5 @@ const TheContextProvider = (props) => {
         </TheContext.Provider>
     )
 }
-
 
 export default TheContextProvider;

@@ -41,7 +41,7 @@ export default function Footer() {
                     <li><Link to="">COPYRIGHT</Link></li>
                 </ul>
                 <div className="col-12 d-flex pb-5">
-                    <h3>QSHOP</h3><i class="fal fa-triangle mx-2"></i>
+                    <h3>QSHOP</h3><i className="fal fa-triangle mx-2"></i>
                     <h3>QARA</h3>
                 </div>
             </div>

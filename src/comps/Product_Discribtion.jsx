@@ -1,5 +1,5 @@
 import React from "react";
-import Brands from "./assets/all_brands"
+import Brands from "./assets/allBrands"
 import Products from "./functions/Products";
 
 export default function Product_Discribtion(props) {

@@ -76,10 +76,10 @@ export default function Product_details(props) {
                         <h1 className="mt-lg-0 mt-4">{product.title}</h1>
                         <div className="rate my-2">
                             {fullStars.map((index) => (
-                                <i class="fa-solid fa-star" key={index} />
+                                <i className="fa-solid fa-star" key={index} />
                             ))}
                             {emptyStars.map((index) => (
-                                <i class="fa-light fa-star" key={index + fullStars.length} />
+                                <i className="fa-light fa-star" key={index + fullStars.length} />
                             ))}
                         </div>
                         <h2>
@@ -87,7 +87,7 @@ export default function Product_details(props) {
                         </h2>
                     </div>
                     <div>
-                        {product.express && <h4><i class="fal fa-shipping-fast me-2" />Express Delivery</h4>}
+                        {product.express && <h4><i className="fal fa-shipping-fast me-2" />Express Delivery</h4>}
                         <form className="sizes my-3">
                             {product.sizes.map((size, index) => (
                                 <label key={index}>

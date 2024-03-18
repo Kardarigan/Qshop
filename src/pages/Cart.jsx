@@ -4,53 +4,35 @@ import Breadcrumb from "../comps/Breadcrumb";
 import { Link } from "react-router-dom";
 import Message from "../comps/Message";
 
-const useTotalPrice = () => {
-    const [totalPrice, setTotalPrice] = useState(0);
-
-    const calculateTotalPrice = (cartItems) => {
-        let total = 0;
-        for (const key in cartItems) {
-            const product = cartItems[key];
-            total += product.price * product.quantity;
-        }
-        setTotalPrice(total);
-    };
-
-    return [totalPrice, calculateTotalPrice];
-};
-
 export default function Cart() {
-    const { all_product, cartItems, addToCart, removeFromCart, increasProduct, dicreasProduct } = useContext(TheContext);
+    const { allProduct, cartItems, addToCart, removeFromCart, increasProduct, dicreasProduct } = useContext(TheContext);
     const [message, setMessage] = useState("");
-    const [totalPrice, calculateTotalPrice] = useTotalPrice();
 
-    useEffect(() => {
-        calculateTotalPrice(cartItems);
-    }, [cartItems]);
-
+    console.log(cartItems);
     return (
         <section className="cart py-5">
             <Message message={message} show={message.length > 0} />
             <Breadcrumb cart />
             <h1 className="py-3">Shopping Cart: </h1>
             <hr className="mt-0" />
-            {all_product.map((product, index) => {
-                if (cartItems[product.id]) {
+            {cartItems.length > 0 ? (
+                cartItems.map((product, index) => {
+                    const productInfo = allProduct.find(p => p.id === product.id);
                     return (
                         <div className="d-flex justify-content-between mt-3" key={index}>
                             <div className="cart-card d-flex">
-                                <Link to={`/${product.category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>
-                                    <img src={product.cover} alt={product.title} />
+                                <Link to={`/${productInfo.category}/Product/${productInfo.id}`} onClick={window.scrollTo(0, 0)}>
+                                    <img src={productInfo.cover} alt={productInfo.title} />
                                 </Link>
                                 <div className="ms-2">
-                                    <h2><Link to={`/${product.category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>{product.title}</Link></h2>
-                                    <p className="mb-2">${product.price}</p>
+                                    <h2><Link to={`/${productInfo.category}/Product/${productInfo.id}`} onClick={window.scrollTo(0, 0)}>{productInfo.title}</Link></h2>
+                                    <p className="mb-2">${productInfo.price}</p>
                                     <p className="mb-2">Size: {product.selectedSize}</p>
                                     <p className="mb-2">Color: {product.selectedColor}</p>
-                                    <p className="mb-2">{product.brand}</p>
+                                    <p className="mb-2">{productInfo.brand}</p>
                                     <div className="addToCart">
                                         <button className="button button-classic" onClick={() => dicreasProduct(product.id)}>-</button>
-                                        <span className="flexCentralizer">{cartItems[product.id]}</span>
+                                        <span className="flexCentralizer">{product.quantity}</span>
                                         <button className="button button-classic" onClick={() => increasProduct(product.id)}>+</button>
                                     </div>
                                 </div>
@@ -60,16 +42,19 @@ export default function Cart() {
                             </button>
                         </div>
                     )
+                })
+            ) : (
+                <h3> Your Shopping Cart is empty</h3>
+            )}
+            {allProduct.map((item, i) => {
+                if (cartItems[item.id]) {
+                    <p>{item.title}</p>
                 }
             })}
-            {!cartItems &&
-                <h3> Your Shopping Cart is empty</h3>
-            }
             <hr />
             <div className="d-flex align-items-center justify-content-between">
                 <button className="button button-classic">Go to Checkout</button>
-                <span>Total Price : ${totalPrice}</span>
             </div>
-        </section >
+        </section>
     );
 }

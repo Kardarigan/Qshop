@@ -15,7 +15,7 @@ import qara_4 from "./products/qara-product-04.jpg";
 import qara_5 from "./products/qara-product-05.jpg";
 import qara_6 from "./products/qara-product-06.jpg";
 
-let all_product = [
+let allProduct = [
   {
     id: 1,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
@@ -635,4 +635,4 @@ let all_product = [
   },
 ];
 
-export default all_product;
+export default allProduct;

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Data from "../comps/assets/all_product";
+import Data from "../comps/assets/allProduct";
 import { useParams } from "react-router-dom";
 import Product_details from "../comps/Product_details";
 import Product_Discribtion from "../comps/Product_Discribtion";

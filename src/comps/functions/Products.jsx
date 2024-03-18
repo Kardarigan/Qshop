@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Data from "../assets/all_product"
+import Data from "../assets/allProduct"
 import Card from "../Card";
 
 const Products = ({ category = false, brand = false, slice = 0, setProductsNum = () => { } }) => {

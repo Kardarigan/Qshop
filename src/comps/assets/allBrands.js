@@ -6,7 +6,7 @@ import Cover_Qara from './brands/cover-qara.jpg';
 import Logo_Qara from './brands/logo-qara.jpg';
 
 
-let all_brands = [
+let allBrands = [
     {
         id: 1,
         brand: 'Frank and Oak',
@@ -33,4 +33,4 @@ let all_brands = [
     },
 ];
 
-export default all_brands;
+export default allBrands;

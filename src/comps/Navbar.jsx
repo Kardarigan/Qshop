@@ -18,10 +18,10 @@ export default function Navbar() {
                 </ul>
                 <div>
                     <NavLink to="/Cart" className="me-3">
-                        <i class="fa-light fa-shopping-cart"></i>
+                        <i className="fa-light fa-shopping-cart"></i>
                     </NavLink>
                     <NavLink to="/Login">
-                        <i class="fa-light fa-sign-in"></i>
+                        <i className="fa-light fa-sign-in"></i>
                     </NavLink>
                 </div>
             </nav>

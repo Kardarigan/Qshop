@@ -21,7 +21,7 @@ export default function Category({ category, banner, title }) {
             <div className="d-flex justify-content-between mt-5 pt-2">
                 <Breadcrumb category={category} />
                 <p>
-                    24 from {productNum} items are shown
+                    24 from {productNum} prods are shown
                 </p>
                 <div>
                     <span>Sort By: </span>
