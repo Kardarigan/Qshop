@@ -9,24 +9,25 @@ export default function Card(product) {
             <Link to={`/${category}/Product/${product.id}`} onClick={window.scrollTo(0, 0)}>
                 <div className="qard">
                     <img src={product.cover} alt={product.title} />
-                    <div className="p-2">
-                        <h2>{product.title}</h2>
-                        <hr />
-                        <div className="d-flex justify-content-between">
-                            <span>
+                    <div>
+                        <h2 className="px-2 pt-2">{product.title}</h2>
+                        <div className="d-flex justify-content-between qard-footer p-1">
+                            <span className="price">
                                 {product.oldPrice ? (
                                     <>
-                                        <del>${product.oldPrice}</del>
-                                        ${product.price}
+                                        <span>
+                                            <del>${product.oldPrice}</del>
+                                            ${product.price}
+                                        </span>
                                         <span>
                                             {Math.round((product.oldPrice - product.price) / product.oldPrice * 100)}% OFF
                                         </span>
                                     </>
                                 ) : (
-                                    <>${product.price}</>
+                                    <span>${product.price}</span>
                                 )}
                             </span>
-                            <span>{product.date}</span>
+                            <span className="click">CLICK</span>
                         </div>
                     </div>
                 </div>
