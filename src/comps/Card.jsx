@@ -11,12 +11,12 @@ export default function Card(product) {
                     <img src={product.cover} alt={product.title} />
                     <div>
                         <h2 className="px-2 pt-2">{product.title}</h2>
-                        <div className="d-flex justify-content-between qard-footer p-1">
-                            <span className="price">
+                        <div className="qard-footer d-flex align-items-center p-1">
+                            <span className="price d-flex align-items-center justify-content-between justify-content-between w-100">
                                 {product.oldPrice ? (
                                     <>
-                                        <span>
-                                            <del>${product.oldPrice}</del>
+                                        <span className="d-flex align-items-center">
+                                            <del className="me-1">${product.oldPrice}</del>
                                             ${product.price}
                                         </span>
                                         <span>

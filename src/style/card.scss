@@ -4,6 +4,8 @@
     background-color: $color_background_2nd;
 
     &-footer {
+        position: relative;
+        overflow-y: hidden;
         background: $color_prime;
         background: linear-gradient(270deg, $color_prime 0%, $color_prime_hover 100%);
         color: $color_text;
@@ -19,7 +21,8 @@
         }
 
         .click {
-            transform: scale(0);
+            position: absolute;
+            transform: translateY(-100%);
         }
     }
 
@@ -46,11 +49,13 @@
         .qard-footer {
 
             .price {
-                transform: scale(0);
+                transform: translateY(100%);
+
             }
 
             .click {
-                transform: scale(1);
+                transform: translateY(0);
+
             }
         }
     }

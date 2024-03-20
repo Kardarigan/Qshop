@@ -1,4 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Breadcrumb from "./Breadcrumb";
 import Message from "./Message";
 import { TheContext } from "./functions/TheContext";
@@ -13,6 +14,8 @@ export default function Product_details(props) {
     const { addToCart } = useContext(TheContext);
     const [addToCartFirstClick, setAddToCartFirstClick] = useState(false);
 
+    const navigate = useNavigate();
+    const [previousLocation, setPreviousLocation] = useState(window.location.pathname);
 
     const fullStars = Array(product.rate).fill(true);
     const emptyStars = Array(5 - product.rate).fill(false);
@@ -55,6 +58,18 @@ export default function Product_details(props) {
 
     };
 
+    useEffect(() => {
+        const currentLocation = window.location.pathname;
+        if (currentLocation !== previousLocation) {
+            console.log('URL changed:', currentLocation);
+
+            setCount(1);
+            setAddToCartFirstClick(false);
+            setSelectedSize(null);
+            setSelectedColor(null);
+            setPreviousLocation(currentLocation);
+        }
+    }, [previousLocation, navigate]);
 
     return (
         <section className="details py-5">
