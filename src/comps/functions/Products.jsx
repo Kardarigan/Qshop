@@ -9,7 +9,7 @@ const Products = ({ category = false, brand = false, slice = 0, setProductsNum =
     function cardMap(targets) {
         return (
             targets.map((item, index) => (
-                <Card key={index} id={item.id} title={item.title} category={item.category} cover={item.cover} price={item.price} date={item.date} />
+                <Card key={index} id={item.id} title={item.title} category={item.category} cover={item.cover} price={item.price} oldPrice={item.oldPrice} date={item.date} />
             ))
         );
     }

@@ -7,7 +7,7 @@ export default function QaraProducts() {
             <h3>. Qara Exclusive</h3>
             <hr />
             <div className="row gy-3">
-                <Products brand='Qara' />
+                <Products brand='Qara' slice={4} />
             </div>
         </section>
     );
