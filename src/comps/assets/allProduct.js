@@ -8,6 +8,7 @@ import WomenCover_2 from "./products/women-product-02.jpg";
 import WomenCover_3 from "./products/women-product-03.jpg";
 import WomenCover_4 from "./products/women-product-04.jpg";
 import WomenCover_5 from "./products/women-product-05.jpg";
+import WomenCover_6 from "./products/women-product-06.jpg";
 import qara_1 from "./products/qara-product-01.jpg";
 import qara_2 from "./products/qara-product-02.jpg";
 import qara_3 from "./products/qara-product-03.jpg";
@@ -102,7 +103,7 @@ let allProduct = [
     id: 6,
     title: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
     category: "women",
-    cover: WomenCover_1,
+    cover: WomenCover_6,
     price: 50.0,
     sizes: ['XS', 'S', 'L', '5XL'],
     colors: ['Black', 'White', 'Red'],

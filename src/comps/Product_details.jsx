@@ -72,18 +72,18 @@ export default function Product_details(props) {
     }, [previousLocation, navigate]);
 
     return (
-        <section className="details py-5">
+        <section className="details py-md-5 pt-2 pb-5">
             <Message message={message} show={message.length > 0} />
             <Breadcrumb product={product} />
-            <div className="row mt-5 gx-3">
-                <div className="col-lg-1 col-2 d-flex justify-content-between flex-column gallery-thumb">
+            <div className="row mt-mt-5 gx-3">
+                <div className="col-lg-1 col-md-2 d-flex justify-content-between flex-md-column gallery-thumb">
                     <img src={product.cover} alt={product.title} />
                     <img src={product.cover} alt={product.title} />
                     <img src={product.cover} alt={product.title} />
                     <img src={product.cover} alt={product.title} />
                     <img src={product.cover} alt={product.title} />
                 </div>
-                <div className="col-lg-5 col-10 gallery-main">
+                <div className="col-lg-5 col-md-10 gallery-main mt-md-0 mt-3">
                     <img src={product.cover} alt={product.title} />
                 </div>
                 <div className="col-lg-6 d-flex justify-content-between flex-column details-content">
